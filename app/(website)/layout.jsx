@@ -10,16 +10,12 @@ async function sharedMetaData(params) {
     // enable this for resolving opengraph image
     // metadataBase: new URL(settings.url),
     title: {
-      default:
-        settings?.title ||
-        "Stablo - Blog Template for Next.js & Sanity CMS",
-      template: "%s | Stablo"
+      default: settings?.title || "My Blog",
+      template: "%s | Blog"
     },
-    description:
-      settings?.description ||
-      "Stablo - popular open-source next.js and sanity blog template",
+    description: settings?.description || "Welcome to my blog",
     keywords: ["Next.js", "Sanity", "Tailwind CSS"],
-    authors: [{ name: "Surjith" }],
+    authors: [{ name: "Asraful" }],
     canonical: settings?.url,
     openGraph: {
       images: [
@@ -33,7 +29,7 @@ async function sharedMetaData(params) {
       ]
     },
     twitter: {
-      title: settings?.title || "Stablo Template",
+      title: settings?.title || "My blog",
       card: "summary_large_image"
     },
     robots: {
@@ -59,5 +55,4 @@ export default async function Layout({ children, params }) {
     </>
   );
 }
-// enable revalidate for all pages in this layout
-// export const revalidate = 60;
+export const revalidate = 60;

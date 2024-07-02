@@ -28,8 +28,8 @@ export default function Contact({ settings }) {
   const { submit: onSubmit } = useWeb3Forms({
     access_key: apiKey,
     settings: {
-      from_name: "Stablo Template",
-      subject: "New Contact Message from Stablo Website"
+      from_name: "user",
+      subject: "New Contact Message from user"
     },
     onSuccess: (msg, data) => {
       setIsSuccess(true);
